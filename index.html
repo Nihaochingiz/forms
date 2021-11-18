@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORMS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form class="telegram-form" action="./result" method="POST" name="telegram" id="telegram-register">
+    <legend>Please, register to Telegram</legend>
+
+    <fieldset class="questions">
+      <label for="name-input" required>Enter Name:</label>
+      <input type="text" id="name-input">
+
+      <label for="email-input">Enter Email:</label>
+      <input type="email" id="email-input" required>
+
+      <label for="password-input">Enter Password:</label>
+      <div class="password">
+        <input type="password" name="password" id="password-input" class="password-input" required>
+        <img class="eye hidden" id="eye" src="eye.svg" alt="hide password">
+        <img class="eye-slash" id="eye-slash" src="eye-slash.svg" alt="show password">
+      </div>
+
+      <label for="confirm-password-input">Confirm Password:</label>
+      <div class="password">
+        <input type="password" name="confirm-password" id="confirm-password-input" class="password-input" required>
+        <img class="eye hidden" id="eye" src="eye.svg" alt="hide password">
+        <img class="eye-slash" id="eye-slash" src="eye-slash.svg" alt="show password">
+      </div>
+
+      <label for="country-select">Select your country:</label>
+      <select id="country-select">
+        <option value="by">Belarus</option>
+        <option value="ru">Russia</option>
+        <option value="ua">Ukraine</option>
+        <option value="uk">United Kingdom</option>
+        <option value="us">USA</option>
+      </select>
+
+      <label for="language-select">Select language:</label>
+      <input list="languages" id="language-select" required>
+
+      <label for="color-input">Select Background color:</label>
+      <input type="color" id="color-input">
+
+      <input type="checkbox" id="accept" required>
+      <label for="accept">Accept terms and services</label>
+
+    </fieldset>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+    <div id="result"></div>
+  </form>
+
+  <datalist id="languages">
+    <option value="Russian">
+    <option value="English">
+  </datalist>
+  <script src="script.js"></script>
+</body>
+</html>
